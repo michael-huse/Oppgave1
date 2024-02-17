@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oblig 1</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<h1>Bestilling av kinobiletter</h1>
+
+<!-- Lager en tabell som inneholder en gardin meny, og input felter for all informasjon rundt bestilling-->
+
+<table>
+    <tr>
+        <td> <select id="velgFilm" name="inout">
+            <option value="" disabled selected> Velg film </option>
+            <option>Seven pounds</option>
+            <option>The longest yard </option>
+            <option>Pretty woman</option>
+            <option>Spirited away</option>
+            <option>Sin city</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="tag">Antall</td>
+        <td><form><input type="number" id="Antall"  name="input" min="0">  </form></td>
+    </tr>
+    <tr>
+        <td class="tag">Fornavn</td>
+        <td><form><input type="text" id="fornavn" name="input" onchange="inputValideringfornavn()"></form></td>
+        <td><p id="fornavnvalidering"></p></td>
+    </tr>
+    <tr>
+        <td class="tag">Etternavn</td>
+        <td><form><input type="text" id="etternavn" name="input" onchange="inputValideringEtternavn()"></form></td>
+        <td><p id="etternavnvalidering"></p></td>
+    </tr>
+    <tr>
+        <td class="tag">Telefonnummer</td>
+        <td><form><input type="text" id="telefonnummer" name="input" onchange="inputValideringtelefonnummer()"></form></td>
+        <td><p id="telefonvalidering"></p></td>
+    </tr>
+    <tr>
+        <td class="tag">Epost</td>
+        <td><form><input type="text" id="epost" name="input" onchange="inputValideringepost()"></form></td>
+        <td><p id="epostvalidering"></p></td>
+    </tr>
+</table>
+
+<!-- Knapp for å kjøpe billett -->
+
+<button onclick="opprettBillett()" id="kjøpbilett">Kjøp billett</button>
+
+<h2>Alle biletter</h2>
+
+<!-- Div som vil innehole billetter printet fra billetter arrayet -->
+
+<div id="billettfelt"></div>
+
+
+<!-- Knapp som tømmer arrayetet -->
+
+<button onclick="tomarray ()" id="slettbiletter">Slett alle billetter</button>
+
+</body>
+</html>
